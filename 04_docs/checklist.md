@@ -76,6 +76,18 @@ Remplissez `04_docs/analysis_plan.md` **avant** de faire tourner les modèles su
 
 Ce n'est pas de la bureaucratie. C'est ce qui différencie une analyse d'un *data dredging* — et c'est de plus en plus exigé par les revues.
 
+
+## 11. Multi-logiciels OK, mais UN seul pipeline
+
+Si vous utilisez Mplus, Stata ou Python en complément de R, l'orchestration part 
+de R, qui appelle les autres logiciels (`MplusAutomation` pour Mplus, `RStata` 
+pour Stata, `reticulate` pour Python). Les fichiers `.inp` et `.do` sont versionnés 
+dans `02_code/mplus/` et `02_code/stata/` comme du code R. Les sorties générées (`.out`, `.log`) vont dans `03_output/` et sont gitignorées.
+
+L'objectif : votre étudiant·e, votre directeur ou directrice, ou vous-même dans 
+6 mois, doit pouvoir faire `make all` et reproduire **tout** — nettoyage R, 
+modèles Mplus, tableaux R — sans jamais ouvrir manuellement un logiciel.
+
 ---
 
 ## En cas de doute
