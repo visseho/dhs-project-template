@@ -1,0 +1,70 @@
+# =========================================================
+# DONNÉES — ne jamais pousser de microdata sur GitHub
+# =========================================================
+01_data/raw/**
+01_data/interim/**
+01_data/processed/**
+!01_data/**/.gitkeep
+!01_data/**/README.md
+
+# PDF des références (souvent sous copyright)
+references/*.pdf
+
+# =========================================================
+# SORTIES — régénérées par le pipeline
+# =========================================================
+03_output/tables/**
+03_output/figures/**
+03_output/logs/**
+!03_output/**/.gitkeep
+
+# =========================================================
+# CONFIG LOCALE — chemins spécifiques à chaque machine
+# =========================================================
+_config_local.yml
+_config_local.*
+config_local.*
+.env
+*.secret
+
+# =========================================================
+# R / RStudio
+# =========================================================
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+renv/local/
+renv/cellar/
+renv/python/
+renv/staging/
+
+# =========================================================
+# Python / Quarto / LaTeX
+# =========================================================
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+_freeze/
+.quarto/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# =========================================================
+# OS / éditeur
+# =========================================================
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

@@ -1,0 +1,37 @@
+---
+title: "[Titre de l'article]"
+author:
+  - name: "[Étudiant·e]"
+    affiliation: "SSAPOPLAB, UQAM"
+  - name: "[Directeur·rice]"
+    affiliation: "SSAPOPLAB, UQAM"
+date: today
+format:
+  docx:
+    reference-doc: reference.docx
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+bibliography: ../references/references.bib
+abstract: |
+  [Contexte]. [Objectifs]. [Méthodes]. [Résultats]. [Conclusion].
+---
+
+# Introduction
+
+# Méthodes
+
+## Données
+
+## Variables
+
+## Analyse statistique
+
+# Résultats
+
+# Discussion
+
+# Références
+
+::: {#refs}
+:::

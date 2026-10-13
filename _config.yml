@@ -1,0 +1,40 @@
+# =========================================================
+# Configuration du projet (versionnée)
+#
+# Toutes les constantes du projet vivent ici. Pour surcharger
+# un chemin spécifique à votre machine (ex. dossier des données
+# sur un disque externe), créez un fichier _config_local.yml
+# à la racine : il est automatiquement gitignoré et surchargera
+# les valeurs ci-dessous.
+# =========================================================
+
+project:
+  name: "mon-projet-dhs"       # À personnaliser
+  version: "0.1.0"
+  pi: "Nom du directeur ou directrice"
+  student: "Votre nom"
+
+paths:
+  data_raw:       "01_data/raw"
+  data_interim:   "01_data/interim"
+  data_processed: "01_data/processed"
+  data_external:  "01_data/external"
+  output_tables:  "03_output/tables"
+  output_figures: "03_output/figures"
+  output_logs:    "03_output/logs"
+
+# Liste des pays et enquêtes DHS à analyser.
+# Code pays = ISO3 à 3 lettres. Le survey_id est libre mais
+# doit correspondre au nom du sous-dossier dans 01_data/raw/.
+countries:
+  - code: "BEN"
+    surveys: ["DHS-VII-2017-18"]
+  # Ajoutez vos pays ici au fur et à mesure.
+
+# Paramètres d'analyse — à adapter à votre projet.
+analysis:
+  women_age_min: 15
+  women_age_max: 49
+  men_age_min:   15
+  men_age_max:   59
+  weight_rescale: "country_n"   # ou "denormalized"

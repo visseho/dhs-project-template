@@ -1,0 +1,32 @@
+---
+title: "Exploration des données"
+format: html
+---
+
+Carnet d'exploration. À utiliser pour tester, visualiser, comprendre les données **avant** d'écrire du code dans le pipeline.
+
+```{r setup}
+source(here::here("02_code", "00_setup.R"))
+```
+
+## Charger les données harmonisées
+
+```{r}
+# Exemple pour un pays
+d <- readRDS(here::here("01_data", "interim", "BEN",
+                        "DHS-VII-2017-18", "harmonised", "ir.rds"))
+dim(d)
+```
+
+## Inspecter les variables disponibles
+
+```{r}
+names(d)
+```
+
+## Chercher une variable par son étiquette
+
+```{r}
+labs <- sapply(d, function(x) attr(x, "label"))
+labs[grep("mot_clé_ici", labs, ignore.case = TRUE)]
+```
